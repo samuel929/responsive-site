@@ -1,0 +1,614 @@
+body {
+  margin: 0;
+  font-family: "Be Vietnam Pro", sans-serif;
+}
+
+.layout {
+  height: 100vh;
+  position: relative;
+  background-image: url("./img/logo.jpg");
+  background-repeat: no-repeat;
+  width: 100vw;
+  background-color: white;
+}
+
+h1 {
+  font-weight: 300;
+  font-size: clamp(2rem, 5vw, 4rem);
+  width: 50%;
+  margin: 0;
+}
+
+.menu {
+  position: absolute;
+  z-index: 10;
+  padding: 25% clamp(2rem, 8vw, 7rem) 0;
+  top: -350px;
+}
+
+.menu:before {
+  position: absolute;
+  content: "";
+  width: 3.5em;
+  height: 3.5em;
+  border-radius: 50%;
+  background: rgba(0, 0, 0, 0.1);
+  z-index: -1;
+  transform: scale(0);
+  transition: transform 0.5s ease;
+}
+
+.menu:hover:before {
+  transform: scale(1);
+}
+
+nav {
+  position: fixed;
+  z-index: 100;
+  right: 0;
+  top: 75px;
+  width: 55%;
+  height: 80vh;
+  display: flex;
+  align-items: end;
+}
+
+nav ul {
+  list-style: none;
+}
+
+nav ul .mask {
+  overflow: hidden;
+}
+
+nav ul li a {
+  padding: 0.2em 0;
+  display: block;
+  font-size: clamp(2rem, 3vw, 4rem);
+  text-decoration: none;
+  color: white;
+  font-weight: 100;
+  position: relative;
+}
+
+nav ul li a:before {
+  position: absolute;
+  content: "";
+  width: 100%;
+  border-bottom: 1px solid white;
+  bottom: 0;
+  transform: scaleX(0);
+  transition: transform 0.5s ease;
+  transform-origin: left;
+}
+
+nav ul li a:hover:before {
+  transform: scaleX(1);
+}
+
+.inner {
+  padding: 30% clamp(2rem, 8vw, 7rem) 0;
+}
+
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.9);
+  transform-origin: top;
+  pointer-events: none;
+}
+
+/* /About Us */
+.about-container {
+  background-image: url("./img/about.jpg");
+  width: 100vw;
+  height: 100vh;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.p-about-left{
+    padding-left: 100px;
+}
+
+.rotate-about {
+  display: flex;
+  justify-content: flex-start;
+  width: 100%;
+  transform: rotate(271deg);
+  position: relative;
+  left: 37%;
+  bottom: 14%;
+  color: white;
+  font-size: 200px;
+}
+
+.about-text {
+  width: 50%;
+  line-height: 2rem;
+  font-size: 30px;
+}
+
+.story-text {
+  width: 50%;
+  line-height: 2rem;
+  font-size: 20px;
+}
+
+.rotate-story {
+  display: flex;
+  justify-content: flex-start;
+  width: 100%;
+  transform: rotate(271deg);
+  position: relative;
+  left: 37%;
+  color: white;
+  top:60px;
+  font-size: 140px;
+}
+
+.story-container {
+  padding: 60px 80px 60px 80px;
+  background-color: white;
+  height: 100vh;
+}
+
+.story-flex-container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.mis-img {
+  height: 700px;
+  width: 600px;
+}
+
+.mission-head {
+  width: 100%;
+}
+.mission-margin-left {
+  margin-left: 120px;
+}
+
+.blue-line {
+  background-color: #0588a6;
+  height: 30px;
+  width: 100%;
+}
+
+.mission-sub {
+  color: #3b7193;
+  font-size: 40px;
+}
+
+.margin-hed {
+  margin-top: 20px;
+}
+
+.mission-line {
+  line-height: 23px;
+}
+
+.service-back {
+  background-image: url("./img/coin.jpg");
+  height: 100vh;
+  width: 100vw;
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 100px;
+}
+
+.service li {
+  margin-top: 10px;
+}
+
+.service-heading {
+  font-size: 20px;
+  margin-left: 20px;
+}
+
+.service-margin {
+  margin-top: 90px;
+}
+
+.service-flex-container {
+  display: flex;
+  margin-right: 120px;
+}
+
+.choose-container {
+  padding: 50px;
+  background-color: white;
+  height: 100vh;
+}
+
+.choose-ul li {
+  width: 30%;
+  line-height: 25px;
+}
+
+.span-bold-choose {
+  font-weight: bold;
+}
+
+.team-container {
+  padding: 100px;
+  background-color: white;
+  height: 100vh;
+}
+
+.directors {
+  font-size: 12px;
+  color: #b5b5b5;
+}
+
+.carson {
+  background-color: #0588a6;
+  height: 10px;
+  width: 300px;
+}
+
+.sumary-container {
+  background-color: white;
+  height: 100vh;
+  padding: 50px;
+}
+
+.logo-summary {
+  height: 300px;
+  width: 100%;
+}
+
+.summary-line {
+  background-color: #0588a6;
+  width: 50px;
+  height: 160px;
+  margin-right: 20px;
+}
+
+.summary-flex-container {
+  display: flex;
+  padding: 0 80px 0 80px;
+  justify-content: space-between;
+}
+
+.contact-container {
+  background-image: url("./img/coin.jpg");
+  height: 100vh;
+  width: 100vw;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.contact {
+  display: flex;
+  justify-content: flex-end;
+  align-items: end;
+  height: 53%;
+  width: 100%;
+  position: relative;
+  right: 20%;
+}
+
+.fa {
+  position: relative;
+  right: 10px;
+}
+
+/* Responsive Home */
+/* // Small devices (landscape phones, 576px and up) */
+@media (max-width: 576px) {
+  .menu {
+    position: absolute;
+    z-index: 10;
+    padding: 25% clamp(2rem, 8vw, 7rem) 0;
+    top: -86px;
+  }
+  nav {
+    position: fixed;
+    z-index: 100;
+    right: 21px;
+    top: 96px;
+    width: 55%;
+    height: 80vh;
+    display: flex;
+    align-items: end;
+}
+.layout {
+    height: 100vh;
+    position: relative;
+    background-image: url(./img/logo.jpg);
+    background-repeat: no-repeat;
+    width: 100vw;
+    background-color: white;
+    background-size: contain;
+}
+}
+
+/* // Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) {
+    .menu {
+        position: absolute;
+        z-index: 10;
+        padding: 25% clamp(2rem, 8vw, 7rem) 0;
+        top: -173px;
+    }
+    .layout {
+        height: 100vh;
+        position: relative;
+        background-image: url(./img/logo.jpg);
+        background-repeat: no-repeat;
+        width: 100vw;
+        background-color: white;
+        background-size: contain;
+    }
+
+    nav {
+        position: fixed;
+        z-index: 100;
+        right: 0;
+        top: -192px;
+        width: 55%;
+        height: 80vh;
+        display: flex;
+        align-items: end;
+    }
+}
+
+/* // Large devices (desktops, 992px and up) */
+@media (min-width: 992px) {
+}
+
+/* // X-Large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {
+    .menu {
+        position: absolute;
+        z-index: 10;
+        padding: 25% clamp(2rem, 8vw, 7rem) 0;
+        top: -300px;
+    }
+    nav {
+        position: fixed;
+        z-index: 100;
+        right: 0;
+        top: 114px;
+        width: 55%;
+        height: 80vh;
+        display: flex;
+        align-items: end;
+      }
+}
+
+/* // XX-Large devices (larger desktops, 1400px and up) */
+@media (min-width: 1400px) {
+    .menu {
+        position: absolute;
+        z-index: 10;
+        padding: 25% clamp(2rem, 8vw, 7rem) 0;
+        top: -300px;
+    }
+    nav {
+        position: fixed;
+        z-index: 100;
+        right: 0;
+        top: 114px;
+        width: 55%;
+        height: 80vh;
+        display: flex;
+        align-items: end;
+      }
+}
+
+
+/* About us */
+/* // Small devices (landscape phones, 576px and up) */
+@media (max-width: 412px) { 
+    .rotate-about {
+        display: none;
+        justify-content: flex-start;
+        width: 100%;
+        transform: rotate(271deg);
+        position: relative;
+        left: 37%;
+        bottom: -155%;
+        color: white;
+        font-size: 200px;
+      }
+
+      .about-text{
+        width:100%;
+        font-size: 1rem;
+      }
+      .p-about-left{
+        padding-left: 10px;
+        padding-top: 100px;
+      }
+
+      nav {
+        position: fixed;
+        z-index: 100;
+        right: 10%;
+        top: 6%;
+        width: 55%;
+        height: 80vh;
+        display: flex;
+        align-items: end;
+    }
+ }
+
+ @media (max-width: 360px) { 
+    nav {
+        position: fixed;
+        z-index: 100;
+        right: 20%;
+        top: -8%;
+        width: 55%;
+        height: 80vh;
+        display: flex;
+        align-items: end;
+      }
+
+ }
+
+ @media (max-width:384px) {
+    nav {
+        position: fixed;
+        z-index: 100;
+        right: 20%;
+        top: -8%;
+        width: 55%;
+        height: 80vh;
+        display: flex;
+        align-items: end;
+      }
+ }
+ @media (min-width: 576px) { 
+    .rotate-about {
+        display: flex;
+        justify-content: flex-start;
+        width: 100%;
+        transform: rotate(271deg);
+        position: relative;
+        left: 37%;
+        bottom: -155%;
+        color: white;
+        font-size: 200px;
+      }
+ }
+
+/* // Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) { 
+
+ }
+
+/* // Large devices (desktops, 992px and up) */
+@media (min-width: 992px) { 
+
+}
+
+/* // X-Large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) { 
+
+ }
+
+/* // XX-Large devices (larger desktops, 1400px and up) */
+@media (min-width: 1400px) { 
+    
+ }
+
+ /* Contact */
+ /* // Small devices (landscape phones, 576px and up) */
+@media (max-width: 576px) { 
+    .contact {
+        display: flex;
+        justify-content: flex-end;
+        align-items: end;
+        height: 53%;
+        width: 100%;
+        position: relative;
+        right: 10%;
+      }
+ }
+
+ @media (max-width: 360px) { 
+    .contact {
+        display: flex;
+        justify-content: flex-end;
+        align-items: end;
+        height: 53%;
+        width: 100%;
+        position: relative;
+        right: 5%;
+      }
+
+      nav {
+        position: fixed;
+        z-index: 100;
+        right: 15%;
+        top: 16%;
+        width: 55%;
+        height: 80vh;
+        display: flex;
+        align-items: end;
+      }
+ }
+
+ @media (max-width: 375px) { 
+    .contact {
+        display: flex;
+        justify-content: flex-end;
+        align-items: end;
+        height: 53%;
+        width: 100%;
+        position: relative;
+        right: 5%;
+      }
+
+      nav {
+        position: fixed;
+        z-index: 100;
+        right: 15%;
+        top: 16%;
+        width: 55%;
+        height: 80vh;
+        display: flex;
+        align-items: end;
+      }
+ }
+
+ @media (max-width: 390px) { 
+    .contact {
+        display: flex;
+        justify-content: flex-end;
+        align-items: end;
+        height: 53%;
+        width: 100%;
+        position: relative;
+        right: 5%;
+      }
+
+      nav {
+        position: fixed;
+        z-index: 100;
+        right: 15%;
+        top: 16%;
+        width: 55%;
+        height: 80vh;
+        display: flex;
+        align-items: end;
+      }
+ }
+
+ .summary-flex{
+    display: flex;
+    width:50%;
+    flex-wrap: wrap;
+ }
+
+ /* // Small devices (landscape phones, 576px and up) */
+@media (max-width: 576px) { 
+.rotate-story{
+    display: none;
+}
+.story-text{
+    width: 100%;
+}
+}
+
+@media (max-width: 360px) { 
+   .story-img{
+    height: 70px;
+   }
+ }
+
+/* // Large devices (desktops, 992px and up) */
+@media (min-width: 992px) {  }
+
+/* // X-Large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {  }
+
+/* // XX-Large devices (larger desktops, 1400px and up) */
+@media (min-width: 1400px) {  }
